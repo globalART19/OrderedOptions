@@ -55,10 +55,9 @@ class ActiveOptTable extends React.Component {
 
   render() {
     const rows = [];
-    activeOptList.forEach((activeOptList) => {
-      rows.push(<ActiveOptRow activeOptList={activeOptList} key={activeOptList.stock} />);
-    },
-    );
+    activeOptList.forEach((activeOptListItem) => {
+      rows.push(<ActiveOptRow activeOptListItem={activeOptListItem} key={activeOptListItem.stock} />);
+    });
     return (
       <table>
         <thead>
@@ -81,13 +80,14 @@ class ActiveOptTable extends React.Component {
 
 class ActiveOptRow extends React.Component {
   render() {
+    const { activeOptListItem } = this.props;
     return (
       <tr>
-        <td>{activeOptList.stock}</td>
-        <td>{activeOptList.stockPrice}</td>
-        <td>{activeOptList.optDetails}</td>
-        <td>{activeOptList.optValue}</td>
-        <td>{activeOptList.gainLoss}</td>
+        <td>{activeOptListItem.stock}</td>
+        <td>{activeOptListItem.stockPrice}</td>
+        <td>{activeOptListItem.optDetails}</td>
+        <td>{activeOptListItem.optValue}</td>
+        <td>{activeOptListItem.gainLoss}</td>
       </tr>
     );
   }
