@@ -13,6 +13,8 @@ import s from './Layout.css';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+// import ActiveOpt from '../ActiveOpt';
+import AccountStatus from '../AccountStatus';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -23,7 +25,9 @@ class Layout extends React.Component {
     return (
       <div>
         <Header />
-        {this.props.children}
+        {/* {this.props.children} */}
+        <AccountStatus />
+        {/* <ActiveOpt /> */}
         <Feedback />
         <Footer />
       </div>

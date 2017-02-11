@@ -33,7 +33,7 @@ class Html extends React.Component {
           {style && <style id="css" dangerouslySetInnerHTML={{ __html: style }} />}
         </head>
         <body>
-          <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
+          <div id="app" />
           {scripts && scripts.map(script => <script key={script} src={script} />)}
           {analytics.google.trackingId &&
             <script
