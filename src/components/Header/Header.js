@@ -27,7 +27,7 @@ class Header extends React.Component {
           {/* </Link> */}
           <div className={s.banner}>
             <h1 className={s.bannerTitle}>ORDERED OPTIONS</h1>
-            {/* <p className={s.bannerDesc}>Complex web apps made easy</p> */}
+            <p className={s.bannerDesc}>Identify and control your options investments</p>
           </div>
         </div>
       </div>
