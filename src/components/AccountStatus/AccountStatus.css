@@ -10,8 +10,11 @@
 @import '../variables.css';
 
 .root {
-  background: #333;
-  color: #fff;
+  background: #efd180;
+  color: #000;
+  display: inline-block;
+  width: 35%;
+  float: right;
 }
 
 .container {

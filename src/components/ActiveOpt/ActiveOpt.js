@@ -11,6 +11,7 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './ActiveOpt.css';
 import Link from '../Link';
+// import ActiveOptTable from './ActiveOptTable';
 
 const activeOptList = [
   { stock: 'TSLA', stockPrice: 167.45, optDetails: 'TSLA170217C00165000', optValue: 54.95, gainLoss: 12 },

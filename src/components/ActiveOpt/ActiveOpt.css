@@ -17,8 +17,10 @@ table {
 }
 
 .root {
-  background: #333;
-  color: #fff;
+  background: #efd180;
+  color: #000;
+  display: inline-block;
+  width: 65%;
 }
 
 .container {

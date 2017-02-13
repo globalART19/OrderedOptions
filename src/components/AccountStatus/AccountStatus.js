@@ -17,7 +17,7 @@ class AccountStatus extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>Test Input</h1>
+          <h1>Account Status</h1>
         </div>
       </div>
     );

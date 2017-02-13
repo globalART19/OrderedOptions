@@ -14,13 +14,13 @@
 }
 
 .root {
-  background: #373277;
-  color: #fff;
+  background: #764;
+  color: #efd180;
 }
 
 .container {
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 5px 0;
   max-width: var(--max-content-width);
 }
 
@@ -45,8 +45,8 @@
 
 .bannerTitle {
   margin: 0;
-  padding: 10px;
-  font-weight: normal;
+  /*padding: 5px;*/
+  font-weight: 900;
   font-size: 4em;
   line-height: 1em;
 }
