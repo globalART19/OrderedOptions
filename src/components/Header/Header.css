@@ -34,26 +34,49 @@
   margin-left: 10px;
 }
 
-.nav {
-  float: right;
-  margin-top: 6px;
-}
-
 .banner {
   text-align: center;
 }
 
 .bannerTitle {
+  text-decoration: none;
   margin: 0;
   /*padding: 5px;*/
   font-weight: 900;
   font-size: 4em;
   line-height: 1em;
+  color: inherit;
+}
+
+.bannerBottom {
+  /*border: solid;*/
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  /*float: right;*/
+  margin-top: 6px;
+  /*border: solid;*/
+  margin-left: auto;
+  width: 190px;
+}
+
+.spacer {
+  /*float: right;*/
+  margin-top: 6px;
+  /*border: solid;*/
+  margin-right: auto;
+  width: 190px;
 }
 
 .bannerDesc {
-  padding: 0;
+  /*border: solid;*/
+  /*padding: 0;*/
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.25em;
-  margin: 0;
+  margin: 0 auto;
+
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
 }
