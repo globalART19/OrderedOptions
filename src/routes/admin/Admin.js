@@ -21,7 +21,8 @@ class Admin extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{this.props.title}</h1>
-          <p>...</p>
+          <p>Admin page controls.</p><br/>
+          <p>Will need to ask AJAX about what typically goes here.</p>
         </div>
       </div>
     );

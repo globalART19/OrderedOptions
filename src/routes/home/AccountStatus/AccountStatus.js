@@ -10,7 +10,7 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './AccountStatus.css';
-import Link from '../Link';
+// import Link from '../Link';
 
 class AccountStatus extends React.Component {
   render() {
