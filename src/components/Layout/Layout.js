@@ -25,9 +25,9 @@ class Layout extends React.Component {
     return (
       <div>
         <Header />
-        {this.props.children}
         <AccountStatus />
         <ActiveOpt />
+        {this.props.children}
         <Feedback />
         <Footer />
       </div>

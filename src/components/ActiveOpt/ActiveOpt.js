@@ -11,12 +11,12 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './ActiveOpt.css';
 import Link from '../Link';
-// import ActiveOptTable from './ActiveOptTable';
+import ActiveOptTable from '../ActiveOptTable';
 
-const activeOptList = [
-  { stock: 'TSLA', stockPrice: 167.45, optDetails: 'TSLA170217C00165000', optValue: 54.95, gainLoss: 12 },
-  { stock: 'MSFT', stockPrice: 64.00, optDetails: 'MSFT170217C00064000', optValue: 0.30, gainLoss: -0.02 },
-];
+// const activeOptList = [
+//   { stock: 'TSLA', stockPrice: 167.45, optDetails: 'TSLA170217C00165000', optValue: 54.95, gainLoss: 12 },
+//   { stock: 'MSFT', stockPrice: 64.00, optDetails: 'MSFT170217C00064000', optValue: 0.30, gainLoss: -0.02 },
+// ];
 
 class ActiveOpt extends React.Component {
   constructor(props) {
@@ -44,7 +44,8 @@ class ActiveOpt extends React.Component {
         <div className={s.container}>
           <h3>Active Options</h3>
           <div>
-            <ActiveOptTable activeOptList={activeOptList} />
+            <ActiveOptTable />
+            {/* activeOptList={activeOptList} */}
           </div>
         </div>
       </div>
@@ -52,46 +53,46 @@ class ActiveOpt extends React.Component {
   }
 }
 
-class ActiveOptTable extends React.Component {
-
-  render() {
-    const rows = [];
-    activeOptList.forEach((activeOptListItem) => {
-      rows.push(<ActiveOptRow activeOptListItem={activeOptListItem} key={activeOptListItem.stock} />);
-    });
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th className="Stock">Stock</th>
-            <th className="Stock-price">Stock Price</th>
-            <th className="Opt-details">Option Details</th>
-            <th className="Opt-value">Opt Value</th>
-            <th className="Gain-loss">+/-</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* <tr>Covered Calls: </tr> */}
-          {rows}
-        </tbody>
-      </table>
-    );
-  }
-}
-
-class ActiveOptRow extends React.Component {
-  render() {
-    const { activeOptListItem } = this.props;
-    return (
-      <tr>
-        <td>{activeOptListItem.stock}</td>
-        <td>{activeOptListItem.stockPrice}</td>
-        <td>{activeOptListItem.optDetails}</td>
-        <td>{activeOptListItem.optValue}</td>
-        <td>{activeOptListItem.gainLoss}</td>
-      </tr>
-    );
-  }
-}
+// class ActiveOptTable extends React.Component {
+//
+//   render() {
+//     const rows = [];
+//     activeOptList.forEach((activeOptListItem) => {
+//       rows.push(<ActiveOptRow activeOptListItem={activeOptListItem} key={activeOptListItem.stock} />);
+//     });
+//     return (
+//       <table>
+//         <thead>
+//           <tr>
+//             <th className="Stock">Stock</th>
+//             <th className="Stock-price">Stock Price</th>
+//             <th className="Opt-details">Option Details</th>
+//             <th className="Opt-value">Opt Value</th>
+//             <th className="Gain-loss">+/-</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {/* <tr>Covered Calls: </tr> */}
+//           {rows}
+//         </tbody>
+//       </table>
+//     );
+//   }
+// }
+//
+// class ActiveOptRow extends React.Component {
+//   render() {
+//     const { activeOptListItem } = this.props;
+//     return (
+//       <tr>
+//         <td>{activeOptListItem.stock}</td>
+//         <td>{activeOptListItem.stockPrice}</td>
+//         <td>{activeOptListItem.optDetails}</td>
+//         <td>{activeOptListItem.optValue}</td>
+//         <td>{activeOptListItem.gainLoss}</td>
+//       </tr>
+//     );
+//   }
+// }
 
 export default withStyles(s)(ActiveOpt);
