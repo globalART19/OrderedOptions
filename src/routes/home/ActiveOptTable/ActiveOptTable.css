@@ -9,11 +9,12 @@
 
 @import '../variables.css';
 
-table {
+.aotable {
   margin: auto;
   text-align: center;
   border-collapse: collapse;
-  width: 90%
+  width: 95%;
+  border: solid;
 }
 
 /*.root {

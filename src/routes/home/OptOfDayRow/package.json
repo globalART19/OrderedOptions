@@ -1,0 +1,6 @@
+{
+  "name": "OptOfDayRow",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./OptOfDayRow.js"
+}

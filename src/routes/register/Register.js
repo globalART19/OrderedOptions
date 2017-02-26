@@ -28,7 +28,8 @@ class Register extends React.Component {
         <div className={s.container}>
           <h1>{this.props.title}</h1>
           <input type="text" size="40" placeholder="Type your email" id="email" /><br />
-          <input type="password" size="40" placeholder="Type your password" id="password" /><br />
+          <input type="password" size="40" placeholder="Type your new password" id="password" /><br />
+          <input type="passwordConf" size="40" placeholder="Re-type your new password" id="passwordConf" /><br />
           <input type="button" value="Submit" id="submit" />
           <p>Now to learn how to store user information!!</p>
         </div>

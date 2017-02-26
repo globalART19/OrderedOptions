@@ -9,23 +9,23 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './ActiveOptTable.css';
+import s from './OptOfDayTable.css';
 // import Link from '../Link';
-import ActiveOptRow from '../ActiveOptRow';
+import OptOfDayRow from '../OptOfDayRow';
 
 const activeOptList = [
   { stock: 'TSLA', stockPrice: 167.45, optDetails: 'TSLA170217C00165000', optValue: 54.95, gainLoss: 12 },
   { stock: 'MSFT', stockPrice: 64.00, optDetails: 'MSFT170217C00064000', optValue: 0.30, gainLoss: -0.02 },
 ];
 
-class ActiveOptTable extends React.Component {
+class OptOfDayTable extends React.Component {
   render() {
     const rows = [];
     activeOptList.forEach((activeOptListItem) => {
-      rows.push(<ActiveOptRow activeOptListItem={activeOptListItem} key={activeOptListItem.optDetails} />);
+      rows.push(<OptOfDayRow activeOptListItem={activeOptListItem} key={activeOptListItem.optDetails} />);
     });
     return (
-      <table className={s.aotable}>
+      <table className={s.oodaytable}>
         <thead>
           <tr>
             <th className="Stock">Stock</th>
@@ -44,19 +44,4 @@ class ActiveOptTable extends React.Component {
   }
 }
 
-// class ActiveOptRow extends React.Component {
-//   render() {
-//     const { activeOptListItem } = this.props;
-//     return (
-//       <tr>
-//         <td>{activeOptListItem.stock}</td>
-//         <td>{activeOptListItem.stockPrice}</td>
-//         <td>{activeOptListItem.optDetails}</td>
-//         <td>{activeOptListItem.optValue}</td>
-//         <td>{activeOptListItem.gainLoss}</td>
-//       </tr>
-//     );
-//   }
-// }
-
-export default withStyles(s)(ActiveOptTable);
+export default withStyles(s)(OptOfDayTable);

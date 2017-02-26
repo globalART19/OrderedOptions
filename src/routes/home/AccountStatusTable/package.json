@@ -1,0 +1,6 @@
+{
+  "name": "AccountStatusTable",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AccountStatusTable.js"
+}

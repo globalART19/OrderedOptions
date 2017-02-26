@@ -10,6 +10,7 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './AccountStatus.css';
+import AccountStatusTable from '../AccountStatusTable'
 // import Link from '../Link';
 
 class AccountStatus extends React.Component {
@@ -17,8 +18,8 @@ class AccountStatus extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>Account Status</h1>
-          <p>Test update for git clone push</p>
+          <h2>Account Status</h2>
+          <AccountStatusTable />
         </div>
       </div>
     );

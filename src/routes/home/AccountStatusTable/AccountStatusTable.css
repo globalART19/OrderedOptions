@@ -9,26 +9,33 @@
 
 @import '../variables.css';
 
-/*table {
-  margin: auto;
-  text-align: center;
+.astable {
+  margin: 0 auto;
+  text-align: left;
   border-collapse: collapse;
-  width: 90%
+  width: 95%;
+  border: solid;
+}
+
+.astabledata {
+  text-align: right;
+}
+/*div.astable {
+  text-align: left;
 }*/
 
-.root {
-  /*background: #efd180;*/
+/*.root {
+  background: #efd180;
   color: #000;
   display: inline-block;
-  width: 70%;
-}
+  width: 65%;
+}*
 
 .container {
   margin: 0 auto;
-  padding: 10px 5px;
+  padding: 20px 15px;
   max-width: var(--max-content-width);
   text-align: center;
-  border: solid;
 }
 
 .text {
@@ -54,4 +61,4 @@
 
 .link:hover {
   color: rgba(255, 255, 255, 1);
-}
+}*/

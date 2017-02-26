@@ -12,6 +12,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 import ActiveOpt from './ActiveOpt';
 import AccountStatus from './AccountStatus';
+import OptOfDay from './OptOfDay';
 
 class Home extends React.Component {
   static propTypes = {
@@ -26,9 +27,12 @@ class Home extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>Homepage!!!</h1>
+          {/* <h1>Homepage!!!</h1> */}
           <AccountStatus />
           <ActiveOpt />
+          <div>
+            <OptOfDay />
+          </div>
           {/* <ul className={s.news}>
             {this.props.news.map((item, index) => (
               <li key={index} className={s.newsItem}>
