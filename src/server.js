@@ -29,7 +29,20 @@ import schema from './data/schema';
 import routes from './routes';
 import assets from './assets.json'; // eslint-disable-line import/no-unresolved
 import { port, auth } from './config';
+import pg from 'pg';
 
+var client = new pg.Client({
+  user: 'andrew',
+  database: 'andrew',
+  password: 'andrew',
+});
+
+
+client.connect(function (err) {
+  if (err) {throw err};
+  console.log('database connected');
+
+})
 const app = express();
 
 //
@@ -82,6 +95,12 @@ app.use('/graphql', expressGraphQL(req => ({
   rootValue: { request: req },
   pretty: process.env.NODE_ENV !== 'production',
 })));
+
+app.get('/api/inventory', function(req, res){
+  client.query('SELECT * from inventory',function(err,result){
+    res.send(result.rows);
+  });
+});
 
 //
 // Register server-side rendering middleware

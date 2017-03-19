@@ -16,8 +16,8 @@ class ActiveOptRow extends React.Component {
     const { activeOptListItem } = this.props;
     return (
       <tr className="AORow">
-        <td>{activeOptListItem.stock}</td>
-        <td>{activeOptListItem.stockPrice}</td>
+        <td>{activeOptListItem.name}</td>
+        <td>{activeOptListItem.price}</td>
         <td>{activeOptListItem.optDetails}</td>
         <td>{activeOptListItem.optValue}</td>
         <td>{activeOptListItem.gainLoss}</td>

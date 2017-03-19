@@ -19,10 +19,28 @@ const activeOptList = [
 ];
 
 class ActiveOptTable extends React.Component {
+  constructor () {
+    super();
+    this.state = {
+      items: [],
+    };
+  }
+  componentDidMount () {
+    var that = this;
+    fetch('/api/inventory').then(function (res) {
+      return res.json();
+    }).then(function (json) {
+      console.log(json);
+      that.setState({
+        items: json,
+      })
+    })
+  }
   render() {
+    const items = this.state.items;
     const rows = [];
-    activeOptList.forEach((activeOptListItem) => {
-      rows.push(<ActiveOptRow activeOptListItem={activeOptListItem} key={activeOptListItem.optDetails} />);
+    items.forEach((item) => {
+      rows.push(<ActiveOptRow activeOptListItem={item} key={item.id} />);
     });
     return (
       <table className={s.aotable}>
